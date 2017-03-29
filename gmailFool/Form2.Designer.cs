@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.generatekeyBtn = new System.Windows.Forms.Button();
+            this.savekey_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hvad
@@ -86,9 +87,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(293, 7);
+            this.button3.Location = new System.Drawing.Point(293, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(51, 107);
+            this.button3.Size = new System.Drawing.Size(51, 52);
             this.button3.TabIndex = 5;
             this.button3.Text = "HELP";
             this.button3.UseVisualStyleBackColor = true;
@@ -104,11 +105,23 @@
             this.generatekeyBtn.UseVisualStyleBackColor = true;
             this.generatekeyBtn.Click += new System.EventHandler(this.generatekeyBtn_Click);
             // 
+            // savekey_button
+            // 
+            this.savekey_button.Location = new System.Drawing.Point(293, 62);
+            this.savekey_button.Name = "savekey_button";
+            this.savekey_button.Size = new System.Drawing.Size(51, 52);
+            this.savekey_button.TabIndex = 7;
+            this.savekey_button.Text = "LOAD KEY";
+            this.savekey_button.UseVisualStyleBackColor = true;
+            this.savekey_button.Visible = false;
+            this.savekey_button.Click += new System.EventHandler(this.savekey_button_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 117);
+            this.Controls.Add(this.savekey_button);
             this.Controls.Add(this.generatekeyBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
@@ -133,5 +146,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button generatekeyBtn;
+        private System.Windows.Forms.Button savekey_button;
     }
 }

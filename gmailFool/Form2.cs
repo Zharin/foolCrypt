@@ -100,15 +100,35 @@ namespace gmailFool
                     }
                     File.Move(targPath, curDir + "fileEncrypt.fool");
                     EncryptFile(curDir + "fileEncrypt.fool", pass);
-                    if (pass == "")
-                    {
-                        MessageBox.Show("File converted to .FOOL\n Encryption wasn't chosen.");
-                    }
-                    else
-                    {
+                    
                         File.AppendAllText(curDir + "fileEncrypt.fool", Environment.NewLine + pass);
                         MessageBox.Show("Encryption succeeded!\n Never share the unlock key with people you don't trust.");
-                    }
+                        //save key
+                        DialogResult saveconfirm = MessageBox.Show("Do you wish to save your key?", "Save key?", MessageBoxButtons.YesNoCancel);
+                        if (saveconfirm == DialogResult.Yes)
+                        {
+                        if (File.Exists(curDir + "foolbackup.key"))
+                        {
+                            DialogResult saveerror = MessageBox.Show("There is already a key in the application directory. Do you wish to overwrite?\nIf you move the file somewhere else while this window is open\n you can simply click yes and it wont be removed.", "Error!", MessageBoxButtons.YesNo);
+                            if (saveerror == DialogResult.Yes)
+                            {
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("You chose no.\nApplication will exit now.");
+                            }
+                        }
+                            File.WriteAllText(curDir + "foolbackup.key", pass);
+                            EncryptFile(curDir + "foolbackup.key", pass);
+                            MessageBox.Show("Key saved in application directory.");
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            Application.Exit();
+                        }
+                    
                    
                 }
             }
@@ -176,6 +196,15 @@ namespace gmailFool
                 result.Append(characters[random.Next(characters.Length)]);
             }
             return result.ToString();
+        }
+
+        private void savekey_button_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void getMD5hash(string enPass)
+        {
+
         }
     }
 }
