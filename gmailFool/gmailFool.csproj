@@ -118,7 +118,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bokehlicia-Pacifica-Gmail.ico" />
     <Content Include="fool.ico" />
   </ItemGroup>
   <ItemGroup>

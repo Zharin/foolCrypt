@@ -11,3 +11,11 @@ C:\Users\maen\Documents\Visual Studio 2015\Projects\gmailFool\gmailFool\obj\Debu
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\bin\Debug\foolCrypt.exe.config
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\foolCrypt.exe
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\foolCrypt.pdb
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\bin\Debug\foolCrypt.exe
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\bin\Debug\foolCrypt.pdb
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.csprojResolveAssemblyReference.cache
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.Form1.resources
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.Form2.resources
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.help.resources
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.Properties.Resources.resources
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.csproj.GenerateResource.Cache
