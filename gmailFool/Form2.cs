@@ -206,6 +206,7 @@ namespace gmailFool
             {
                 string keypath = loadK.FileName;
                 string loadkeyText = File.ReadAllText(keypath);
+                MessageBox.Show(loadkeyText + Environment.NewLine + keypath);
                 DecryptFile(keypath, loadkeyText);
                 hvad.Text = loadkeyText;
                 MessageBox.Show(loadkeyText);

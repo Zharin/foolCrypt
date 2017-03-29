@@ -108,7 +108,6 @@
             // 
             // loadkey_button
             // 
-            this.loadkey_button.Enabled = false;
             this.loadkey_button.Location = new System.Drawing.Point(293, 62);
             this.loadkey_button.Name = "loadkey_button";
             this.loadkey_button.Size = new System.Drawing.Size(51, 52);
