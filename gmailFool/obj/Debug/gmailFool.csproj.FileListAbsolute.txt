@@ -8,3 +8,6 @@ C:\Users\maen\Documents\Visual Studio 2015\Projects\gmailFool\gmailFool\bin\Debu
 C:\Users\maen\Documents\Visual Studio 2015\Projects\gmailFool\gmailFool\bin\Debug\foolCrypt.pdb
 C:\Users\maen\Documents\Visual Studio 2015\Projects\gmailFool\gmailFool\obj\Debug\foolCrypt.exe
 C:\Users\maen\Documents\Visual Studio 2015\Projects\gmailFool\gmailFool\obj\Debug\foolCrypt.pdb
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\bin\Debug\foolCrypt.exe.config
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\foolCrypt.exe
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\foolCrypt.pdb
