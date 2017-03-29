@@ -179,7 +179,14 @@ namespace gmailFool
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Never share your key with someone you don't trust!\nIt may increase the risk of the file being compromised.\nEnter a combination of characters and numbers (make these random and not something like 'John1992') and click encrypt/decrypt.\nI would advise you to write your key down on a note/piece of paper and store it somewhere safe.\nThis encrypter is only for use with .rar files.\n I advise you to password protect your .rar files for max security.\n\nThanks for using my program.\nPeace out.");
+            if (hvad.Text == "dev_beta")
+            {
+                loadkey_button.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Never share your key with someone you don't trust!\nIt may increase the risk of the file being compromised.\nEnter a combination of characters and numbers (make these random and not something like 'John1992') and click encrypt/decrypt.\nI would advise you to write your key down on a note/piece of paper and store it somewhere safe.\nThis encrypter is only for use with .rar files.\n I advise you to password protect your .rar files for max security.\n\nThanks for using my program.\nPeace out.");
+            }
         }
 
         public void generatekeyBtn_Click(object sender, EventArgs e)

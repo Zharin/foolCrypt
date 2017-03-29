@@ -114,6 +114,7 @@
             this.loadkey_button.TabIndex = 7;
             this.loadkey_button.Text = "LOAD KEY";
             this.loadkey_button.UseVisualStyleBackColor = true;
+            this.loadkey_button.Visible = false;
             this.loadkey_button.Click += new System.EventHandler(this.loadkey_button_Click);
             // 
             // label3
