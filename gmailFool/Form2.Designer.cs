@@ -35,7 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.generatekeyBtn = new System.Windows.Forms.Button();
-            this.savekey_button = new System.Windows.Forms.Button();
+            this.loadkey_button = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // hvad
@@ -105,23 +106,35 @@
             this.generatekeyBtn.UseVisualStyleBackColor = true;
             this.generatekeyBtn.Click += new System.EventHandler(this.generatekeyBtn_Click);
             // 
-            // savekey_button
+            // loadkey_button
             // 
-            this.savekey_button.Location = new System.Drawing.Point(293, 62);
-            this.savekey_button.Name = "savekey_button";
-            this.savekey_button.Size = new System.Drawing.Size(51, 52);
-            this.savekey_button.TabIndex = 7;
-            this.savekey_button.Text = "LOAD KEY";
-            this.savekey_button.UseVisualStyleBackColor = true;
-            this.savekey_button.Visible = false;
-            this.savekey_button.Click += new System.EventHandler(this.savekey_button_Click);
+            this.loadkey_button.Enabled = false;
+            this.loadkey_button.Location = new System.Drawing.Point(293, 62);
+            this.loadkey_button.Name = "loadkey_button";
+            this.loadkey_button.Size = new System.Drawing.Size(51, 52);
+            this.loadkey_button.TabIndex = 7;
+            this.loadkey_button.Text = "LOAD KEY";
+            this.loadkey_button.UseVisualStyleBackColor = true;
+            this.loadkey_button.Click += new System.EventHandler(this.loadkey_button_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(137, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "External Key Loaded";
+            this.label3.Visible = false;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 117);
-            this.Controls.Add(this.savekey_button);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.loadkey_button);
             this.Controls.Add(this.generatekeyBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
@@ -146,6 +159,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button generatekeyBtn;
-        private System.Windows.Forms.Button savekey_button;
+        private System.Windows.Forms.Button loadkey_button;
+        private System.Windows.Forms.Label label3;
     }
 }

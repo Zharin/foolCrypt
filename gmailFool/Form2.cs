@@ -198,11 +198,28 @@ namespace gmailFool
             return result.ToString();
         }
 
-        private void savekey_button_Click(object sender, EventArgs e)
+        private void loadkey_button_Click(object sender, EventArgs e)
         {
+            OpenFileDialog loadK = new OpenFileDialog();
+            loadK.Filter = "Key(.key) | *.key";
+            if (loadK.ShowDialog() == DialogResult.OK)
+            {
+                string keypath = loadK.FileName;
+                string loadkeyText = File.ReadAllText(keypath);
+                DecryptFile(keypath, loadkeyText);
+                hvad.Text = loadkeyText;
+                MessageBox.Show(loadkeyText);
+                label3.Visible = true;
+
+            }
         }
 
         private void getMD5hash(string enPass)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
