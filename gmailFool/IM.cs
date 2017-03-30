@@ -81,7 +81,7 @@ namespace gmailFool
                 epLocal = new IPEndPoint(IPAddress.Parse(textLocalIp.Text), Convert.ToInt32(textLocalPort.Text));
                 sck.Bind(epLocal);
                 //convert destination ip string input to IP address and port
-                epRemote = new IPEndPoint(IPAddress.Parse(textDestIp.Text), Convert.ToInt32(textDestPort));
+                epRemote = new IPEndPoint(IPAddress.Parse(textDestIp.Text), Convert.ToInt32(textDestPort.Text));
                 sck.Connect(epRemote);
                 //listen to port
                 byte[] buffer = new byte[1500];
