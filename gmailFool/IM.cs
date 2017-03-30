@@ -60,7 +60,7 @@ namespace gmailFool
                     ASCIIEncoding eEnconding = new ASCIIEncoding();
                     string recvMsg = eEnconding.GetString(recvData);
                     //add received data to chat window
-                    chatWindow.Items.Add("Destination: "+recvData);
+                    chatWindow.Items.Add("Destination: " + recvMsg);
                 } //end of if
 
                 byte[] buffer = new byte[1500];
