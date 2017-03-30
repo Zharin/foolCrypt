@@ -91,6 +91,7 @@ namespace gmailFool
                 connectBtn.Text = "Connected";
                 statusLabel.Text = "Status: Active";
                 sendMsgBtn.Enabled = true;
+                textMessage.ReadOnly = false;
                 textMessage.Focus();
             }
             catch (Exception ex)
