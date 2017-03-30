@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.IO;
-using System.Collections;
 
 namespace gmailFool
 {
@@ -69,7 +64,6 @@ namespace gmailFool
         //Encrypt Button
         public void button1_Click(object sender, EventArgs e)
         {
-            //string pass = GetMd5Hash(hvad.Text);
             string pass = hvad.Text;
             int keych = pass.Length;
             if (keych < 8)
@@ -203,9 +197,9 @@ namespace gmailFool
 
         public void generatekeyBtn_Click(object sender, EventArgs e)
         {
-            hvad.Text = GenerateCoupon();
+            hvad.Text = GenerateKey();
         }
-        public static string GenerateCoupon(int length = 8)
+        public static string GenerateKey(int length = 8)
         {
             Random random = new Random();
             string characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -271,5 +265,6 @@ namespace gmailFool
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
         }
+        
     }
 }

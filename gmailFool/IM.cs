@@ -9,9 +9,9 @@ using System.IO;
 
 namespace gmailFool
 {
-    public partial class Form1 : Form
+    public partial class IM : Form
     {
-        public Form1()
+        public IM()
         {
             InitializeComponent();
         }
