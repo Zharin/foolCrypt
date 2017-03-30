@@ -78,7 +78,7 @@ namespace gmailFool
             try
             {
                 //convert local ip string input to IP address and port
-                epLocal = new IPEndPoint(IPAddress.Parse(textLocalIp.Text), Convert.ToInt32(textLocalIp.Text));
+                epLocal = new IPEndPoint(IPAddress.Parse(textLocalIp.Text), Convert.ToInt32(textLocalPort.Text));
                 sck.Bind(epLocal);
                 //convert destination ip string input to IP address and port
                 epRemote = new IPEndPoint(IPAddress.Parse(textDestIp.Text), Convert.ToInt32(textDestPort));
