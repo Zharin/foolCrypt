@@ -81,6 +81,7 @@
             this.textLocalIp.Name = "textLocalIp";
             this.textLocalIp.Size = new System.Drawing.Size(100, 20);
             this.textLocalIp.TabIndex = 0;
+            this.textLocalIp.TextChanged += new System.EventHandler(this.textLocalIp_TextChanged);
             // 
             // textLocalPort
             // 
@@ -88,13 +89,15 @@
             this.textLocalPort.Name = "textLocalPort";
             this.textLocalPort.Size = new System.Drawing.Size(100, 20);
             this.textLocalPort.TabIndex = 2;
+            this.textLocalPort.TextChanged += new System.EventHandler(this.textLocalPort_TextChanged);
             // 
             // textDestIp
             // 
-            this.textDestIp.Location = new System.Drawing.Point(6, 34);
+            this.textDestIp.Location = new System.Drawing.Point(6, 36);
             this.textDestIp.Name = "textDestIp";
             this.textDestIp.Size = new System.Drawing.Size(87, 20);
             this.textDestIp.TabIndex = 0;
+            this.textDestIp.TextChanged += new System.EventHandler(this.textDestIp_TextChanged);
             // 
             // textDestPort
             // 
@@ -102,6 +105,7 @@
             this.textDestPort.Name = "textDestPort";
             this.textDestPort.Size = new System.Drawing.Size(87, 20);
             this.textDestPort.TabIndex = 1;
+            this.textDestPort.TextChanged += new System.EventHandler(this.textDestPort_TextChanged);
             // 
             // textMessage
             // 
@@ -133,12 +137,14 @@
             // sendMsgBtn
             // 
             this.sendMsgBtn.Enabled = false;
+            this.sendMsgBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendMsgBtn.Location = new System.Drawing.Point(330, 302);
             this.sendMsgBtn.Name = "sendMsgBtn";
             this.sendMsgBtn.Size = new System.Drawing.Size(86, 23);
             this.sendMsgBtn.TabIndex = 5;
             this.sendMsgBtn.Text = "Send";
             this.sendMsgBtn.UseVisualStyleBackColor = true;
+            this.sendMsgBtn.Click += new System.EventHandler(this.sendMsgBtn_Click);
             // 
             // label1
             // 
@@ -189,19 +195,22 @@
             // connectBtn
             // 
             this.connectBtn.Enabled = false;
+            this.connectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectBtn.Location = new System.Drawing.Point(230, 85);
             this.connectBtn.Name = "connectBtn";
             this.connectBtn.Size = new System.Drawing.Size(186, 25);
             this.connectBtn.TabIndex = 7;
             this.connectBtn.Text = "Connect";
             this.connectBtn.UseVisualStyleBackColor = true;
+            this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
             // 
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(284, 69);
+            this.statusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.Location = new System.Drawing.Point(230, 62);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(81, 13);
+            this.statusLabel.Size = new System.Drawing.Size(119, 20);
             this.statusLabel.TabIndex = 8;
             this.statusLabel.Text = "Status: Inactive";
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
