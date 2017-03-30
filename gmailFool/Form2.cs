@@ -94,12 +94,24 @@ namespace gmailFool
                 string fileDecrypt = tarCh;
                 if (targName.Contains(".rar") == true)
                 {
-                    if (File.Exists(curDir + "fileEncrypt.fool"))
+                    if (checkBox1.Checked == true)
                     {
-                        File.Delete(curDir + "fileEncrypt.fool");
+                        if (File.Exists(curDir + "fileEncrypt.fool"))
+                        {
+                            File.Delete(curDir + "fileEncrypt.fool");
+                        }
+                        File.Move(targPath, curDir + "fileEncrypt.fool");
+                        EncryptFile(curDir + "fileEncrypt.fool", pass);
                     }
-                    File.Move(targPath, curDir + "fileEncrypt.fool");
-                    EncryptFile(curDir + "fileEncrypt.fool", pass);
+                    else if (checkBox1.Checked == false)
+                    {
+                        if (File.Exists(curDir + "fileEncrypt.fool"))
+                        {
+                            File.Delete(curDir + "fileEncrypt.fool");
+                        }
+                        File.Copy(targPath, curDir + "fileEncrypt.fool");
+                        EncryptFile(curDir + "fileEncrypt.fool", pass);
+                    }
                     
                         File.AppendAllText(curDir + "fileEncrypt.fool", Environment.NewLine + pass);
                         MessageBox.Show("Encryption succeeded!\n Never share the unlock key with people you don't trust.");
@@ -205,7 +217,7 @@ namespace gmailFool
             return result.ToString();
         }
 
-        private void loadkey_button_Click(object sender, EventArgs e)
+        public void loadkey_button_Click(object sender, EventArgs e)
         {
             OpenFileDialog loadK = new OpenFileDialog();
             loadK.Filter = "Key(.key) | *.key";
@@ -222,14 +234,42 @@ namespace gmailFool
             }
         }
 
-        private void getMD5hash(string enPass)
+        public string CalculateMD5Hash(string input)
+
         {
+
+            // step 1, calculate MD5 hash from input
+
+            MD5 md5 = MD5.Create();
+
+            byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+
+            byte[] hash = md5.ComputeHash(inputBytes);
+
+
+            // step 2, convert byte array to hex string
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hash.Length; i++)
+
+            {
+
+                sb.Append(hash[i].ToString("X2"));
+
+            }
+
+            return sb.ToString();
 
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
         }
     }
 }
