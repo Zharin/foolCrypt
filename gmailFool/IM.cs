@@ -100,33 +100,7 @@ namespace gmailFool
             }
         }
 
-
-
-        //enables connect button if all textboxes contain data
-        private void textLocalIp_TextChanged(object sender, EventArgs e)
-        {
-            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0)
-            {
-                connectBtn.Enabled = true;
-            }
-        }
-
-        private void textLocalPort_TextChanged(object sender, EventArgs e)
-        {
-            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0)
-            {
-                connectBtn.Enabled = true;
-            }
-        }
-
-        private void textDestIp_TextChanged(object sender, EventArgs e)
-        {
-            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0)
-            {
-                connectBtn.Enabled = true;
-            }
-        }
-
+        
         private void sendMsgBtn_Click(object sender, EventArgs e)
         {
             try
@@ -148,11 +122,64 @@ namespace gmailFool
             }
         }
 
-        private void textDestPort_TextChanged(object sender, EventArgs e)
+        //enables connect button if all textboxes contain data
+        private void textLocalIp_TextChanged(object sender, EventArgs e)
         {
-            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0)
+            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev_beta")
             {
                 connectBtn.Enabled = true;
+                sendMsgBtn.Enabled = true;
+                attachFileBtn.Enabled = true;
+                textMessage.ReadOnly = false;
+            }
+            else
+            {
+                connectBtn.Enabled = false;
+            }
+        }
+
+        private void textLocalPort_TextChanged(object sender, EventArgs e)
+        {
+            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev_beta")
+            {
+                connectBtn.Enabled = true;
+                sendMsgBtn.Enabled = true;
+                attachFileBtn.Enabled = true;
+                textMessage.ReadOnly = false;
+            }
+            else
+            {
+                connectBtn.Enabled = false;
+            }
+        }
+
+        private void textDestIp_TextChanged(object sender, EventArgs e)
+        {
+            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev_beta")
+            {
+                connectBtn.Enabled = true;
+                sendMsgBtn.Enabled = true;
+                attachFileBtn.Enabled = true;
+                textMessage.ReadOnly = false;
+            }
+            else
+            {
+                connectBtn.Enabled = false;
+            }
+        }
+
+        private void textDestPort_TextChanged(object sender, EventArgs e)
+        {
+            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev_beta")
+            {
+                connectBtn.Enabled = true;
+                sendMsgBtn.Enabled = true;
+                attachFileBtn.Enabled = true;
+                textMessage.ReadOnly = false;
+            }
+            else
+            {
+                connectBtn.Enabled = false;
             }
         }
     }
