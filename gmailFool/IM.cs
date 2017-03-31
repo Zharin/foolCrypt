@@ -92,8 +92,12 @@ namespace gmailFool
                 //convert local ip string input to IP address and port
                 epLocal = new IPEndPoint(IPAddress.Parse(textLocalIp.Text), Convert.ToInt32(textLocalPort.Text));
                 sck.Bind(epLocal);
+                    //test fixed destination
+                    epRemote = new IPEndPoint(IPAddress.Parse("192.168.0.22"), 57);
+                
                 //convert destination ip string input to IP address and port
-                epRemote = new IPEndPoint(IPAddress.Parse(textDestIp.Text), Convert.ToInt32(textDestPort.Text));
+                //epRemote = new IPEndPoint(IPAddress.Parse(textDestIp.Text), Convert.ToInt32(textDestPort.Text));
+
                 sck.Connect(epRemote);
                 //listen to port
                 byte[] buffer = new byte[1500];
@@ -120,9 +124,12 @@ namespace gmailFool
                 //convert message to byte
                 ASCIIEncoding enc = new ASCIIEncoding();
                 byte[] msg = new byte[1500];
+                //byte[] dest = new byte[1500];
+                //dest = enc.GetBytes("DEST" + textDestIp.Text + ":" + textDestPort.Text);
                 msg = enc.GetBytes(textMessage.Text);
 
                 //send message
+                //sck.Send(dest);
                 sck.Send(msg);
                 //add your message to the chat window and clear textbox
                 chatWindow.Items.Add("You: " + textMessage.Text);

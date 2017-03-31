@@ -12,7 +12,6 @@ C:\Users\maen\Source\Repos\gmailFool\gmailFool\bin\Debug\foolCrypt.exe.config
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\bin\Debug\foolCrypt.exe
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\bin\Debug\foolCrypt.pdb
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\bin\Debug\Interop.NATUPNPLib.dll
-C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.csprojResolveAssemblyReference.cache
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\Interop.NATUPNPLib.dll
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.csproj.ResolveComReference.cache
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.IM.resources
@@ -22,3 +21,4 @@ C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.Properties.Re
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.csproj.GenerateResource.Cache
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\foolCrypt.exe
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\foolCrypt.pdb
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.csprojResolveAssemblyReference.cache
