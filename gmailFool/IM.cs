@@ -22,8 +22,10 @@ namespace gmailFool
         {
             InitializeComponent();
 
+            this.AcceptButton = sendMsgBtn;
             sck = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             sck.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+
 
             textLocalIp.Text = GetLocalIP();
         }
