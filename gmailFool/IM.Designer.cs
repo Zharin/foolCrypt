@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.userGrp = new System.Windows.Forms.GroupBox();
-            this.remoteGrp = new System.Windows.Forms.GroupBox();
-            this.textLocalIp = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.textLocalPort = new System.Windows.Forms.TextBox();
-            this.textDestIp = new System.Windows.Forms.TextBox();
+            this.textLocalIp = new System.Windows.Forms.TextBox();
+            this.remoteGrp = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.textDestPort = new System.Windows.Forms.TextBox();
+            this.textDestIp = new System.Windows.Forms.TextBox();
             this.textMessage = new System.Windows.Forms.TextBox();
             this.chatWindow = new System.Windows.Forms.ListBox();
             this.attachFileBtn = new System.Windows.Forms.Button();
             this.sendMsgBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.connectBtn = new System.Windows.Forms.Button();
             this.statusLabel = new System.Windows.Forms.Label();
             this.userGrp.SuspendLayout();
@@ -62,6 +62,40 @@
             this.userGrp.TabStop = false;
             this.userGrp.Text = "Your Details";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(42, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Port";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "IP Address";
+            // 
+            // textLocalPort
+            // 
+            this.textLocalPort.Location = new System.Drawing.Point(6, 73);
+            this.textLocalPort.Name = "textLocalPort";
+            this.textLocalPort.Size = new System.Drawing.Size(100, 20);
+            this.textLocalPort.TabIndex = 2;
+            this.textLocalPort.TextChanged += new System.EventHandler(this.textLocalPort_TextChanged);
+            // 
+            // textLocalIp
+            // 
+            this.textLocalIp.Location = new System.Drawing.Point(6, 36);
+            this.textLocalIp.Name = "textLocalIp";
+            this.textLocalIp.Size = new System.Drawing.Size(100, 20);
+            this.textLocalIp.TabIndex = 0;
+            this.textLocalIp.TextChanged += new System.EventHandler(this.textLocalIp_TextChanged);
+            // 
             // remoteGrp
             // 
             this.remoteGrp.Controls.Add(this.label5);
@@ -75,29 +109,23 @@
             this.remoteGrp.TabStop = false;
             this.remoteGrp.Text = "Destination";
             // 
-            // textLocalIp
+            // label5
             // 
-            this.textLocalIp.Location = new System.Drawing.Point(6, 36);
-            this.textLocalIp.Name = "textLocalIp";
-            this.textLocalIp.Size = new System.Drawing.Size(100, 20);
-            this.textLocalIp.TabIndex = 0;
-            this.textLocalIp.TextChanged += new System.EventHandler(this.textLocalIp_TextChanged);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Port";
             // 
-            // textLocalPort
+            // label4
             // 
-            this.textLocalPort.Location = new System.Drawing.Point(6, 73);
-            this.textLocalPort.Name = "textLocalPort";
-            this.textLocalPort.Size = new System.Drawing.Size(100, 20);
-            this.textLocalPort.TabIndex = 2;
-            this.textLocalPort.TextChanged += new System.EventHandler(this.textLocalPort_TextChanged);
-            // 
-            // textDestIp
-            // 
-            this.textDestIp.Location = new System.Drawing.Point(6, 36);
-            this.textDestIp.Name = "textDestIp";
-            this.textDestIp.Size = new System.Drawing.Size(87, 20);
-            this.textDestIp.TabIndex = 0;
-            this.textDestIp.TextChanged += new System.EventHandler(this.textDestIp_TextChanged);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "IP Address";
             // 
             // textDestPort
             // 
@@ -106,6 +134,14 @@
             this.textDestPort.Size = new System.Drawing.Size(87, 20);
             this.textDestPort.TabIndex = 1;
             this.textDestPort.TextChanged += new System.EventHandler(this.textDestPort_TextChanged);
+            // 
+            // textDestIp
+            // 
+            this.textDestIp.Location = new System.Drawing.Point(6, 36);
+            this.textDestIp.Name = "textDestIp";
+            this.textDestIp.Size = new System.Drawing.Size(87, 20);
+            this.textDestIp.TabIndex = 0;
+            this.textDestIp.TextChanged += new System.EventHandler(this.textDestIp_TextChanged);
             // 
             // textMessage
             // 
@@ -133,6 +169,7 @@
             this.attachFileBtn.TabIndex = 4;
             this.attachFileBtn.Text = "Attach File";
             this.attachFileBtn.UseVisualStyleBackColor = true;
+            this.attachFileBtn.Click += new System.EventHandler(this.attachFileBtn_Click);
             // 
             // sendMsgBtn
             // 
@@ -155,42 +192,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "File Attached";
             this.label1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "IP Address";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Port";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "IP Address";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 57);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Port";
             // 
             // connectBtn
             // 

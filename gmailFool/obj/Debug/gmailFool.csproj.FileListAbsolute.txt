@@ -18,3 +18,4 @@ C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.help.resource
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.Properties.Resources.resources
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.csproj.GenerateResource.Cache
 C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.IM.resources
+C:\Users\maen\Source\Repos\gmailFool\gmailFool\obj\Debug\gmailFool.csprojResolveAssemblyReference.cache

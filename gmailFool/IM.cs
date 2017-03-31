@@ -75,6 +75,16 @@ namespace gmailFool
 
         private void connectBtn_Click(object sender, EventArgs e)
         {
+                if (connectBtn.Text == "Disconnect")
+                {
+                    sck.Shutdown(SocketShutdown.Both);
+                    connectBtn.Text = "Connect";
+                    statusLabel.Text = "Status: Inactive";
+                    sendMsgBtn.Enabled = false;
+                    textMessage.ReadOnly = true;
+                }
+                    else
+                    {
             try
             {
                 //convert local ip string input to IP address and port
@@ -86,9 +96,8 @@ namespace gmailFool
                 //listen to port
                 byte[] buffer = new byte[1500];
                 sck.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref epRemote, new AsyncCallback(MessageCallBack), buffer);
-
-                connectBtn.Enabled = false;
-                connectBtn.Text = "Connected";
+                
+                connectBtn.Text = "Disconnect";
                 statusLabel.Text = "Status: Active";
                 sendMsgBtn.Enabled = true;
                 textMessage.ReadOnly = false;
@@ -98,6 +107,7 @@ namespace gmailFool
             {
                 MessageBox.Show(ex.ToString());
             }
+                    }
         }
 
         
@@ -118,16 +128,26 @@ namespace gmailFool
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Please try again in a moment.\nYour connection might not have been established yet.");
+                //MessageBox.Show(ex.ToString());
             }
         }
+
+        private void attachFileBtn_Click(object sender, EventArgs e)
+        {
+            Form form = new Form2();
+            form.ShowDialog();
+        }
+
+        //------------------------------------------------------------activate connect button-----------------------------------------------------------------------------------
 
         //enables connect button if all textboxes contain data
         private void textLocalIp_TextChanged(object sender, EventArgs e)
         {
-            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev_beta")
+            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev")
             {
                 connectBtn.Enabled = true;
+                //development only
                 sendMsgBtn.Enabled = true;
                 attachFileBtn.Enabled = true;
                 textMessage.ReadOnly = false;
@@ -140,9 +160,10 @@ namespace gmailFool
 
         private void textLocalPort_TextChanged(object sender, EventArgs e)
         {
-            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev_beta")
+            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev")
             {
                 connectBtn.Enabled = true;
+                //development only
                 sendMsgBtn.Enabled = true;
                 attachFileBtn.Enabled = true;
                 textMessage.ReadOnly = false;
@@ -155,9 +176,10 @@ namespace gmailFool
 
         private void textDestIp_TextChanged(object sender, EventArgs e)
         {
-            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev_beta")
+            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev")
             {
                 connectBtn.Enabled = true;
+                //development only
                 sendMsgBtn.Enabled = true;
                 attachFileBtn.Enabled = true;
                 textMessage.ReadOnly = false;
@@ -167,12 +189,13 @@ namespace gmailFool
                 connectBtn.Enabled = false;
             }
         }
-
+        
         private void textDestPort_TextChanged(object sender, EventArgs e)
         {
-            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev_beta")
+            if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev")
             {
                 connectBtn.Enabled = true;
+                //development only
                 sendMsgBtn.Enabled = true;
                 attachFileBtn.Enabled = true;
                 textMessage.ReadOnly = false;
