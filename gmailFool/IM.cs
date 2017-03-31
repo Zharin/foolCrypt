@@ -21,11 +21,9 @@ namespace gmailFool
         public IM()
         {
             InitializeComponent();
-
-            this.AcceptButton = sendMsgBtn;
+            
             sck = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             sck.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-
 
             textLocalIp.Text = GetLocalIP();
         }
@@ -77,6 +75,8 @@ namespace gmailFool
 
         private void connectBtn_Click(object sender, EventArgs e)
         {
+                this.AcceptButton = sendMsgBtn;
+
                 if (connectBtn.Text == "Disconnect")
                 {
                     sck.Shutdown(SocketShutdown.Both);
@@ -148,6 +148,7 @@ namespace gmailFool
         {
             if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev")
             {
+                this.AcceptButton = connectBtn;
                 connectBtn.Enabled = true;
                 //development only
                 sendMsgBtn.Enabled = true;
@@ -164,6 +165,7 @@ namespace gmailFool
         {
             if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev")
             {
+                this.AcceptButton = connectBtn;
                 connectBtn.Enabled = true;
                 //development only
                 sendMsgBtn.Enabled = true;
@@ -180,6 +182,7 @@ namespace gmailFool
         {
             if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev")
             {
+                this.AcceptButton = connectBtn;
                 connectBtn.Enabled = true;
                 //development only
                 sendMsgBtn.Enabled = true;
@@ -196,6 +199,7 @@ namespace gmailFool
         {
             if (textLocalIp.TextLength > 0 && textLocalPort.TextLength > 0 && textDestIp.TextLength > 0 && textDestPort.TextLength > 0 || textLocalPort.Text == "dev")
             {
+                this.AcceptButton = connectBtn;
                 connectBtn.Enabled = true;
                 //development only
                 sendMsgBtn.Enabled = true;
